@@ -103,6 +103,12 @@ namespace GameFrameX.Payment.Minigame.Douyin.Runtime
             var money = Convert.ToInt32(productType);
             Log.Debug($"Pay itemID: {productId}, money: {money}, orderId: {orderId}, goodName: {offerToken}, extData: {obfuscatedProfileId}", productType, orderId, money, obfuscatedProfileId);
 
+            if (offerToken.Length > 10)
+            {
+                Log.Warning($"抖音支付 goodName 长度不能超过10个字符，当前长度为 {offerToken.Length} ，将会执行截取前10个字符");
+                offerToken = offerToken.Substring(0, 10);
+            }
+
             if (TTSDK.TT.GetSystemInfo().platform.ToLower() == "android")
             {
                 var requestGamePaymentParam = new Dictionary<string, object>()
