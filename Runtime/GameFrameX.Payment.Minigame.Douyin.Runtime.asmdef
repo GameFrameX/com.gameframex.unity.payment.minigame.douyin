@@ -1,0 +1,19 @@
+{
+  "name": "GameFrameX.Payment.Minigame.Douyin.Runtime",
+  "rootNamespace": "GameFrameX.Payment.Minigame.Douyin.Runtime",
+  "references": [
+    "GameFrameX.Runtime",
+    "GameFrameX.Payment.Runtime",
+    "TTWebGL",
+    "TTLitJson"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
