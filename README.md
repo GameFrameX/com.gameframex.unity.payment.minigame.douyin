@@ -74,6 +74,7 @@ public class DouyinPayExample : MonoBehaviour
 - `productType`：会被 `Convert.ToInt32(productType)` 转为 `money`，并直接作为 `orderAmount` 传入（本包不会对金额做 `* 100`）。
 - `orderId`：传入 `customId`。
 - `offerToken`：传入 `goodName`。
+- `offerToken` 长度限制：当 `goodName`（即 `offerToken`）长度超过 10 个字符时，会截断为前 10 个字符并输出警告日志。
 - `obfuscatedProfileId`：传入 `extraInfo`。
 
 ## 支付结果处理说明
