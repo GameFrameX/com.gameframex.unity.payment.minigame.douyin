@@ -21,6 +21,7 @@ namespace GameFrameX.Payment.Minigame.Douyin.Runtime
         void Start()
         {
             _ = typeof(MiniGameDouYinPaymentManager);
+            _ = typeof(DouyinPurchaseParams);
         }
     }
 }
