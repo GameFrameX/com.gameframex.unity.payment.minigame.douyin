@@ -27,6 +27,8 @@
 //   Official Documentation: https://gameframex.doc.alianblank.com/
 //  ==========================================================================================
 
+#if ENABLE_DOUYIN_MINI_GAME
+
 using GameFrameX.Payment.Runtime;
 using UnityEngine;
 using UnityEngine.Scripting;
@@ -48,3 +50,5 @@ namespace GameFrameX.Payment.Minigame.Douyin.Runtime
         }
     }
 }
+
+#endif
