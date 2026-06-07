@@ -77,7 +77,6 @@ Then add the package to `dependencies`:
 }
 ```
 
-
 ## Buy Parameter Mapping
 
 `MiniGameDouYinPaymentManager.Buy(productId, productType, orderId, offerToken, obfuscatedProfileId)` maps internally as follows:
@@ -105,4 +104,4 @@ See [CHANGELOG.md](CHANGELOG.md) for details.
 
 ## License
 
-This project is licensed under the Apache-2.0 License - see the [LICENSE.md](LICENSE.md) file for details.
+See [LICENSE.md](LICENSE.md) for license information.
