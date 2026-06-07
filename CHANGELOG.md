@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/gameframex/com.gameframex.unity.payment.minigame.douyin/compare/1.0.0...1.0.1) (2026-06-07)
+
+
+### Bug Fixes
+
+* 补全包规范文件（LICENSE/CHANGELOG/URL 字段/unity 字段） ([5a19ee8](https://github.com/gameframex/com.gameframex.unity.payment.minigame.douyin/commit/5a19ee860477b450a4d394f50540bea821ece1fc))
+
 # 1.0.0 (2026-03-11)
 
 
