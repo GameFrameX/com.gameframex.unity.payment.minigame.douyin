@@ -103,6 +103,20 @@ Then add the package to `dependencies`:
 
 詳見 [CHANGELOG.md](CHANGELOG.md)。
 
+
+## 依賴
+
+| 套件 | 說明 |
+|------|------|
+| `com.gameframex.unity` | 1.1.1 |
+
+## 文檔與資源
+
+- [官方文檔](https://gameframex.doc.alianblank.com)
+
+## 社區與支援
+
+- QQ群: 467608841 / 233840761
 ## 開源協議
 
 該專案根據 Apache-2.0 協議授權 - 有關詳細資訊，請參閱 [LICENSE.md](LICENSE.md) 檔案。
