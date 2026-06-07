@@ -49,48 +49,34 @@ This package is the Douyin Mini Game payment adapter for GameFrameX.Payment. It 
 
 ### Installation
 
-Add the dependency in `Packages/manifest.json` (Git method):
+Edit your Unity project's `Packages/manifest.json` and add the `scopedRegistries` section:
+
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "GameFrameX",
+      "url": "https://gameframex.upm.alianblank.uk",
+      "scopes": [
+        "com.gameframex"
+      ]
+    }
+  ]
+}
+```
+
+`scopes` controls which packages are resolved through this registry. Only packages whose names start with `com.gameframex` will be fetched from it.
+
+Then add the package to `dependencies`:
 
 ```json
 {
   "dependencies": {
-    "com.gameframex.unity.payment.minigame.douyin": "https://github.com/gameframex/com.gameframex.unity.payment.minigame.douyin.git"
+    "com.gameframex.unity.payment.minigame.douyin": "1.0.0"
   }
 }
 ```
 
-### Usage
-
-1. Create a GameObject in the scene and add `PaymentComponent`.
-2. Add `GameFrameXPaymentMiniGameDouYinCroppingHelper` to the same GameObject (used to reference `MiniGameDouYinPaymentManager` at build time to prevent stripping).
-3. Use `PaymentComponent.Buy(...)` to initiate payment.
-
-Example:
-
-```csharp
-using GameFrameX.Payment.Runtime;
-using UnityEngine;
-
-public class DouyinPayExample : MonoBehaviour
-{
-    [SerializeField] private PaymentComponent payment;
-
-    private void Awake()
-    {
-        if (payment == null)
-        {
-            payment = FindObjectOfType<PaymentComponent>();
-        }
-
-        payment.Init();
-    }
-
-    public void Pay(string itemId, int amount, string orderId, string goodName, string extraInfo)
-    {
-        payment.Buy(itemId, amount.ToString(), orderId, goodName, extraInfo);
-    }
-}
-```
 
 ## Buy Parameter Mapping
 

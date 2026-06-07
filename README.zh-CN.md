@@ -49,48 +49,34 @@
 
 ### 安装
 
-在 `Packages/manifest.json` 中添加依赖（Git 方式）：
+编辑 Unity 项目的 `Packages/manifest.json`，添加 `scopedRegistries` 部分：
+
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "GameFrameX",
+      "url": "https://gameframex.upm.alianblank.uk",
+      "scopes": [
+        "com.gameframex"
+      ]
+    }
+  ]
+}
+```
+
+`scopes` 控制哪些包通过此注册表解析。只有以 `com.gameframex` 开头的包才会从这个注册表获取。
+
+Then add the package to `dependencies`:
 
 ```json
 {
   "dependencies": {
-    "com.gameframex.unity.payment.minigame.douyin": "https://github.com/gameframex/com.gameframex.unity.payment.minigame.douyin.git"
+    "com.gameframex.unity.payment.minigame.douyin": "1.0.0"
   }
 }
 ```
 
-### 使用
-
-1. 在场景中创建一个 GameObject，添加 `PaymentComponent`。
-2. 同一个 GameObject 上添加 `GameFrameXPaymentMiniGameDouYinCroppingHelper`（用于在构建时引用 `MiniGameDouYinPaymentManager`，避免裁剪/剥离导致类型不可用）。
-3. 使用 `PaymentComponent.Buy(...)` 发起支付。
-
-示例：
-
-```csharp
-using GameFrameX.Payment.Runtime;
-using UnityEngine;
-
-public class DouyinPayExample : MonoBehaviour
-{
-    [SerializeField] private PaymentComponent payment;
-
-    private void Awake()
-    {
-        if (payment == null)
-        {
-            payment = FindObjectOfType<PaymentComponent>();
-        }
-
-        payment.Init();
-    }
-
-    public void Pay(string itemId, int amount, string orderId, string goodName, string extraInfo)
-    {
-        payment.Buy(itemId, amount.ToString(), orderId, goodName, extraInfo);
-    }
-}
-```
 
 ## Buy 参数映射
 
