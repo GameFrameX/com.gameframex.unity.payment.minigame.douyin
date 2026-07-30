@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/gameframex/com.gameframex.unity.payment.minigame.douyin/compare/1.0.1...1.0.2) (2026-07-30)
+
+
+### Bug Fixes
+
+* 更新依赖项版本至 com.gameframex.unity 2.5.1 和 com.gameframex.unity.payment 1.1.0 ([328f912](https://github.com/gameframex/com.gameframex.unity.payment.minigame.douyin/commit/328f91283ccffe31aa2da4cfe76282c9f9493455))
+
 ## [1.0.1](https://github.com/gameframex/com.gameframex.unity.payment.minigame.douyin/compare/1.0.0...1.0.1) (2026-06-07)
 
 
